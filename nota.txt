@@ -3,3 +3,21 @@ nota.txt
 git add . : aplica todos los cambios
 git commit - am "mensaje";
 git push origin
+
+se recomiendo dar un numero a commit, para los ussues
+
+Permite hacer un trello de issues
+https://waffle.io/
+
+Crear página estatica en github:
+https://jlcallalle.github.io/
+
+Páginas de ejemplo
+
+https://github.com/trevordmiller/github-pages-starter-kit
+
+
+git status
+
+crear rama manualmente 
+gh-pages
