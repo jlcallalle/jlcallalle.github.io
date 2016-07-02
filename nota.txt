@@ -1,0 +1,5 @@
+nota.txt
+
+git add . : aplica todos los cambios
+git commit - am "mensaje";
+git push origin
