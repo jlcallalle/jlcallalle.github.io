@@ -1,0 +1,35 @@
+// Generales
+
+* {
+    -webkit-font-smoothing: antialiased; /* Sin bold en Mac. */
+    box-sizing: border-box;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font-weight: normal;
+    margin: 0;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+    cursor: pointer;
+    outline: none;
+}
+
+
+@mixin contenedor() {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.contenedor {
+    @include contenedor;
+    padding: 0 20px;
+}

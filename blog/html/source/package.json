@@ -1,0 +1,23 @@
+{
+  "name": "front-end-core",
+  "version": "3.3.0",
+  "description": "front-end core",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jorge Callalle",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-cache": "^0.4.1",
+    "gulp-combine-mq": "^0.4.0",
+    "gulp-imagemin": "^2.4.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-watch": "^4.3.5",
+    "stylus-media-queries": "^1.0.0"
+  },
+  "dependencies": {
+    "imagemin-pngquant": "^4.2.0"
+  }
+}
