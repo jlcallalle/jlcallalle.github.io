@@ -1,0 +1,33 @@
+{
+  "name": "workflow-gulp-starter-kit",
+  "version": "1.0.0",
+  "description": "Kit de inicio para desarrollo web con HTML, SCSS, JS",
+  "main": "index.html",
+  "repository": {
+    "url": "https://github.com/jlcallalle/gulp-workflow",
+    "type": "git"
+  },
+  "author": "Jorge Callalle Torres <jlcallalle@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "animate.css": "^3.7.0",
+    "font-awesome": "^4.7.0",
+    "jquery": "^3.3.1",
+    "normalize.css": "^8.0.0",
+    "owl.carousel": "^2.3.4",
+    "sass-mediaqueries": "^1.6.1"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.23.6",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^5.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-imagemin": "^4.1.0",
+    "gulp-plumber": "^1.2.0",
+    "gulp-pug": "^4.0.1",
+    "gulp-rename": "^1.4.0",
+    "gulp-sass": "^4.0.1",
+    "gulp-sourcemaps": "^2.6.4",
+    "gulp-uglify": "^3.0.1"
+  }
+}
