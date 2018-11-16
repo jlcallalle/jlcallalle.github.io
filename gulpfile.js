@@ -6,16 +6,16 @@ var concat = require('gulp-concat');
 var sourcemaps = require('gulp-sourcemaps');
 var imagemin = require('gulp-imagemin');
 var autoprefixer = require('gulp-autoprefixer');
-var pug = require('gulp-pug'); 
-var plumber = require('gulp-plumber'); 
+var pug = require('gulp-pug');
+var plumber = require('gulp-plumber');
 var browserSync = require('browser-sync').create();
 
   dir = {
-    src: 'src', 
-    dist: './', 
+    src: 'src',
+    dist: './',
     nm: 'node_modules'
   },
-  files = { 
+  files = {
     JS: [
       `${dir.nm}/jquery/dist/jquery.min.js`,
       `${dir.nm}/owl.carousel/dist/owl.carousel.min.js`
@@ -37,7 +37,7 @@ gulp.task('default', ['html', 'css', 'js'], function() {
     });
     gulp.watch("src/**/*.js", ['js']).on('change', browserSync.reload);
     gulp.watch("src/scss/**/*.scss", ['css']);
-    gulp.watch("./*.html").on('change', browserSync.reload);
+    gulp.watch("./**/*.html").on('change', browserSync.reload);
     gulp.watch("src/pug/**/*.pug", ['html']);
 });
 
@@ -56,14 +56,14 @@ gulp.task('css', function(){
    return gulp.src(`${dir.src}/scss/**/*.scss`)
        .pipe(sourcemaps.init({ loadMaps: true }))
        .pipe(plumber())
-       .pipe(sass({outputStyle: 'nested'}).on('error', sass.logError)) //expanded, nested, compact, compressed 
+       .pipe(sass({outputStyle: 'nested'}).on('error', sass.logError)) //expanded, nested, compact, compressed
        .pipe(autoprefixer({ browsers: ['last 2 versions'] }))
        .pipe(sourcemaps.write('./'))
        .pipe(gulp.dest(`${dir.dist}/css`))
        .pipe(browserSync.stream());
 });
 
-// compila main.js 
+// compila main.js
 gulp.task('js', function () {
    gulp.src(`${dir.src}/js/*.js`)
      .pipe(gulp.dest(`${dir.dist}/js`))
@@ -77,11 +77,11 @@ gulp.task('js-recursos', () => {
   gulp
     .src( files.JS  )
     .pipe( concat('recursos.min.js') )
-    .pipe( uglify() ) 
+    .pipe( uglify() )
     .pipe( gulp.dest(`${dir.dist}/js`) )
 });
 
-// compila fuente font-awesome 
+// compila fuente font-awesome
 gulp.task('fonts', () => {
   gulp
     .src(files.fonts)
@@ -95,7 +95,7 @@ gulp.task('media', () => {
     .pipe(gulp.dest(`${dir.dist}/img`))
 })
 
-// crear archivos estaticos 
+// crear archivos estaticos
 gulp.task('statics', () => {
   gulp
     .src(files.statics)

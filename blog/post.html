@@ -86,19 +86,38 @@
     <div class="wrapper wrapper--flex">
         <main class="site__main"><article class="post">
             <header class="post__header m-b-lg">
-                <h1 class="post__title h1">What’s New in HTML 5.2?</h1>
+                <h1 class="post__title h1">Qué es First Input Delay ?</h1>
                 <div class="post__meta">
-                    <em>Jan 08, 2018</em>
-                        <em><a href="/tag/html/">html</a></em>
+                    <em>Nov 16, 2018</em>
+                        <em><a href="/tag/performance/">performance</a></em>
                 </div>
             </header>
 
             <div class="post__content p-b-xlg m-b-lg">
-                <p>Less than a month ago, HTML 5.2 became an official W3C Recommendation (REC). When a specification reaches the REC stage, this means that it has received the official endorsement of W3C Members and the Director, and that the W3C officially recommends it’s deployment by user agents, and it’s implementation by web page authors. </p>
+                <p>Todos sabemos lo importante que es hacer una buena primera impresión. Es importante a la hora de conocer gente nueva, y
+                también es importante a la hora de crear experiencias en la web. </p>
 
-                <p>By the REC stage, <a href="https://www.slideshare.net/rachelandrew/where-does-css-come-from/27?src=clipshare">anything new should have had at least 2 independent implementations</a>. This makes it a great time for us, as web page developers, to begin implementation of any new feature. </p>
 
-                <p>In HTML 5.2, there were a number of additions and removals, all of which can be seen on the official <a href="https://www.w3.org/TR/html52/changes.html#changes">HTML 5.2 Changes</a> page. In this article, I’ll go over some of the changes I think will impact my development the most. </p>
+
+                FID es una nueva métrica que apunta a medir la frustración que todos sentimos cuando intentamos interactuar con una
+                página, pero no pasa nada por un tiempo.
+                Es el tiempo para responder a la interacción del usuario.
+
+                <p>(FID), mide el tiempo desde que un usuario interactúa por primera vez con su sitio (es decir, cuando hace clic en un enlace,
+                toca un botón o usa un control personalizado con JavaScript) hasta el momento en que el navegador realmente puede Para
+                responder a esa interacción.</p>
+
+                <p>FID es una nueva métrica que apunta a medir la frustración que todos sentimos cuando intentamos interactuar con una
+                página, pero no pasa nada por un tiempo.
+                Es el tiempo para responder a la interacción del usuario.</p>
+
+
+
+
+                <p>Seguimiento de FID en JavaScript
+                  <a href="https://github.com/GoogleChromeLabs/first-input-delay">Seguimiento de FID en JavaScript
+                  </a>
+               </p>
 
                 <h2 id="newfeatures">New Features</h2>
 
@@ -109,39 +128,39 @@
                 <p>The new <code>&lt;dialog&gt;</code> element aims to change this, providing a simple way to include a modal dialog without having to worry about many of the pitfalls. I will write a separate, detailed article about how this element works, but here are the basics.</p>
 
                 <p>The dialog is created using a <code>&lt;dialog&gt;</code> element:</p>
-                <pre class=" language-html"><code class=" language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dialog</span><span class="token punctuation">&gt;</span></span>  
+                <pre class=" language-html"><code class=" language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dialog</span><span class="token punctuation">&gt;</span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h2</span><span class="token punctuation">&gt;</span></span>Dialog Title<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h2</span><span class="token punctuation">&gt;</span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span>Dialog content and other stuff will go here<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dialog</span><span class="token punctuation">&gt;</span></span>  
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dialog</span><span class="token punctuation">&gt;</span></span>
 </code></pre>
 
-              
+
 <p>By default, the dialog is hidden from view (and from DOM access) unless the <code>open</code> attribute is applied.</p>
 
-<pre class=" language-html"><code class=" language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dialog</span> <span class="token attr-name">open</span><span class="token punctuation">&gt;</span></span>  
+<pre class=" language-html"><code class=" language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dialog</span> <span class="token attr-name">open</span><span class="token punctuation">&gt;</span></span>
 </code></pre>
 
 <p>The <code>open</code> attribute can be toggled by calling the <code>show()</code> and <code>close()</code> methods, which is available to any <code>HTMLDialogElement</code>.</p>
 
-<pre class=" language-html"><code class=" language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>open<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Open Dialog<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">&gt;</span></span>  
+<pre class=" language-html"><code class=" language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>open<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Open Dialog<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">&gt;</span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>close<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Close Dialog<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">&gt;</span></span>
 
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dialog</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>dialog<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>  
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dialog</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>dialog<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h2</span><span class="token punctuation">&gt;</span></span>Dialog Title<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h2</span><span class="token punctuation">&gt;</span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span>Dialog content and other stuff will go here<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dialog</span><span class="token punctuation">&gt;</span></span>
 
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">&gt;</span></span><span class="token script language-javascript">  
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">&gt;</span></span><span class="token script language-javascript">
 <span class="token keyword">const</span> dialog <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">"dialog"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">"open"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">"click"</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token punctuation">{</span>  
+document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">"open"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">"click"</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token punctuation">{</span>
   dialog<span class="token punctuation">.</span><span class="token function">show</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">"close"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">"click"</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token punctuation">{</span>  
+document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">"close"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">"click"</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token punctuation">{</span>
   dialog<span class="token punctuation">.</span><span class="token function">close</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>  
+</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
 </code></pre>
 
 <p>The <code>&lt;dialog&gt;</code> element already has support in Chrome, and is behind a flag in Firefox.  </p>
@@ -156,15 +175,15 @@ document<span class="token punctuation">.</span><span class="token function">get
 
 <p>HTML 5.2 introduced the <code>allowpaymentrequest</code> attribute which, when applied to an iframe, will allow it to use the Payment Request API while the user is on the hosting web page.</p>
 
-<pre class=" language-html"><code class=" language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>iframe</span> <span class="token attr-name">allowpaymentrequest</span><span class="token punctuation">&gt;</span></span>  
+<pre class=" language-html"><code class=" language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>iframe</span> <span class="token attr-name">allowpaymentrequest</span><span class="token punctuation">&gt;</span></span>
 </code></pre>
 
 <h3 id="sizesforappleicons">Sizes for Apple Icons</h3>
 
 <p>To define web page icons, we use the <code>&lt;link rel="icon"&gt;</code> element in the head of our document. To define different sizes of icons, we use the <code>sizes</code> attribute.</p>
 
-<pre class=" language-html"><code class=" language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>icon<span class="token punctuation">"</span></span> <span class="token attr-name">sizes</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>16x16<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>path/to/icon16.png<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>  
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>icon<span class="token punctuation">"</span></span> <span class="token attr-name">sizes</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>32x32<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>path/to/icon32.png<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>  
+<pre class=" language-html"><code class=" language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>icon<span class="token punctuation">"</span></span> <span class="token attr-name">sizes</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>16x16<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>path/to/icon16.png<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>icon<span class="token punctuation">"</span></span> <span class="token attr-name">sizes</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>32x32<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>path/to/icon32.png<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
 </code></pre>
 
 <p>This attribute, although purely advisory, allows user agents to decide which size of icon to use if multiple sizes are available, particularly since most devices have their own different "optimal" icon size.</p>
@@ -185,9 +204,9 @@ document<span class="token punctuation">.</span><span class="token function">get
 
 <p>With HTML 5.2, we can now have multiple <code>&lt;main&gt;</code> elements in our markup, as long as only one is visible to the user at any given time. Any extra elements must be hidden using the <code>hidden</code> attribute.</p>
 
-<pre class=" language-html"><code class=" language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>main</span><span class="token punctuation">&gt;</span></span>...<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>main</span><span class="token punctuation">&gt;</span></span>  
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>main</span> <span class="token attr-name">hidden</span><span class="token punctuation">&gt;</span></span>...<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>main</span><span class="token punctuation">&gt;</span></span>  
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>main</span> <span class="token attr-name">hidden</span><span class="token punctuation">&gt;</span></span>...<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>main</span><span class="token punctuation">&gt;</span></span>  
+<pre class=" language-html"><code class=" language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>main</span><span class="token punctuation">&gt;</span></span>...<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>main</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>main</span> <span class="token attr-name">hidden</span><span class="token punctuation">&gt;</span></span>...<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>main</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>main</span> <span class="token attr-name">hidden</span><span class="token punctuation">&gt;</span></span>...<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>main</span><span class="token punctuation">&gt;</span></span>
 </code></pre>
 
 <p>As we know, there are <a href="https://bitsofco.de/hiding-elements-with-css/">several ways to hide an element with CSS</a>. However, any extra <code>&lt;main&gt;</code> elements must be hidden using the <code>hidden</code> attribute. Any other method for hiding the element, e.g. <code>display: none;</code> or <code>visibility: hidden;</code> will not be valid.</p>
@@ -198,13 +217,13 @@ document<span class="token punctuation">.</span><span class="token function">get
 
 <p>In HTML 5.2, defining an inline <code>&lt;style&gt;</code> block anywhere within the <code>&lt;body&gt;</code> of an HTML document is now valid. This means that we can have styles closer to where they are used. </p>
 
-<pre class=" language-html"><code class=" language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">&gt;</span></span>  
+<pre class=" language-html"><code class=" language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">&gt;</span></span>
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span>I’m cornflowerblue!<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>style</span><span class="token punctuation">&gt;</span></span><span class="token style language-css">
         <span class="token selector">p</span> <span class="token punctuation">{</span> <span class="token property">color</span><span class="token punctuation">:</span> cornflowerblue<span class="token punctuation">;</span> <span class="token punctuation">}</span>
     </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">&gt;</span></span>
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span>I’m cornflowerblue!<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">&gt;</span></span>  
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">&gt;</span></span>
 </code></pre>
 
 <p>However, it is still noted that <strong>styles should preferably be placed in the <code>&lt;head&gt;</code>, for performance reasons</strong>. According the the <a href="https://www.w3.org/TR/html52/document-metadata.html#elementdef-style">specification</a>,</p>
@@ -219,14 +238,14 @@ document<span class="token punctuation">.</span><span class="token function">get
 
 <p>In forms, the <code>&lt;legend&gt;</code> element represents a caption for the form fields within a <code>&lt;fieldset&gt;</code>.  Before HTML 5.2, the content of a legend had to be plain text. Now, we can include heading elements.</p>
 
-<pre class=" language-html"><code class=" language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>fieldset</span><span class="token punctuation">&gt;</span></span>  
+<pre class=" language-html"><code class=" language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>fieldset</span><span class="token punctuation">&gt;</span></span>
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>legend</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h2</span><span class="token punctuation">&gt;</span></span>Basic Information<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h2</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>legend</span><span class="token punctuation">&gt;</span></span>
     <span class="token comment" spellcheck="true">&lt;!-- Form fields for basic information --&gt;</span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>fieldset</span><span class="token punctuation">&gt;</span></span>  
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>fieldset</span><span class="token punctuation">&gt;</span></span>  
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>fieldset</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>fieldset</span><span class="token punctuation">&gt;</span></span>
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>legend</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h2</span><span class="token punctuation">&gt;</span></span>Contact Information<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h2</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>legend</span><span class="token punctuation">&gt;</span></span>
     <span class="token comment" spellcheck="true">&lt;!-- Form fields for contact information --&gt;</span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>fieldset</span><span class="token punctuation">&gt;</span></span>  
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>fieldset</span><span class="token punctuation">&gt;</span></span>
 </code></pre>
 
                 <p>This is really useful for when we want to use the <code>fieldset</code> element to group different sections of a form. In cases like this, it makes perfect sense to use headings, which would make these form sections more easily navigable for users relying on a document outline.</p>
@@ -258,10 +277,10 @@ document<span class="token punctuation">.</span><span class="token function">get
 
                 <p>Finally, we can say goodbye to the following strict document types:</p>
 
-                <pre class=" language-html"><code class=" language-html"><span class="token doctype">&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "<a class="vglnk" href="http://www.w3.org/TR/html4/strict.dtd" rel="nofollow"><span>http</span><span>://</span><span>www</span><span>.</span><span>w3</span><span>.</span><span>org</span><span>/</span><span>TR</span><span>/</span><span>html4</span><span>/</span><span>strict</span><span>.</span><span>dtd</span></a>"&gt;</span>  
+                <pre class=" language-html"><code class=" language-html"><span class="token doctype">&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "<a class="vglnk" href="http://www.w3.org/TR/html4/strict.dtd" rel="nofollow"><span>http</span><span>://</span><span>www</span><span>.</span><span>w3</span><span>.</span><span>org</span><span>/</span><span>TR</span><span>/</span><span>html4</span><span>/</span><span>strict</span><span>.</span><span>dtd</span></a>"&gt;</span>
                 </code></pre>
 
-                <pre class=" language-html"><code class=" language-html"><span class="token doctype">&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "<a class="vglnk" href="http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd" rel="nofollow"><span>http</span><span>://</span><span>www</span><span>.</span><span>w3</span><span>.</span><span>org</span><span>/</span><span>TR</span><span>/</span><span>xhtml1</span><span>/</span><span>DTD</span><span>/</span><span>xhtml1</span><span>-</span><span>strict</span><span>.</span><span>dtd</span></a>"&gt;</span>  
+                <pre class=" language-html"><code class=" language-html"><span class="token doctype">&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "<a class="vglnk" href="http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd" rel="nofollow"><span>http</span><span>://</span><span>www</span><span>.</span><span>w3</span><span>.</span><span>org</span><span>/</span><span>TR</span><span>/</span><span>xhtml1</span><span>/</span><span>DTD</span><span>/</span><span>xhtml1</span><span>-</span><span>strict</span><span>.</span><span>dtd</span></a>"&gt;</span>
                 </code></pre>
             </div>
 
@@ -276,7 +295,7 @@ document<span class="token punctuation">.</span><span class="token function">get
                                         <path d="M18.9999991,1.77490775 C18.3009891,2.07601476 17.5496341,2.27942804 16.7612291,2.37094096 C17.5658791,1.90249077 18.1840441,1.16070111 18.4751241,0.276752768 C17.7218691,0.710608856 16.8876741,1.02555351 15.9997091,1.1952952 C15.2887291,0.459594096 14.2756491,0 13.1544591,0 C11.0017591,0 9.25634305,1.6947417 9.25634305,3.7851476 C9.25634305,4.08182657 9.29080905,4.37075646 9.35728055,4.64778598 C6.11762855,4.48994465 3.24528455,2.98293358 1.32276005,0.692804428 C0.98718205,1.25184502 0.7949562,1.90212177 0.7949562,2.59584871 C0.7949562,3.90913284 1.48311055,5.06771218 2.52911755,5.74649446 C1.89012855,5.72684502 1.28903505,5.55654982 0.7635245,5.27306273 C0.763154,5.28883764 0.763154,5.30461255 0.763154,5.32066421 C0.763154,7.15464022 2.1068435,8.68445572 3.8900315,9.03230627 C3.5629845,9.11879151 3.2186095,9.16510148 2.8631005,9.16510148 C2.611911,9.16510148 2.367723,9.14131919 2.129672,9.0971679 C2.6257145,10.6009317 4.065297,11.6954059 5.77106,11.725821 C4.4369845,12.7411531 2.7562255,13.3463007 0.9298866,13.3463007 C0.61523615,13.3463007 0.30492815,13.328321 0,13.2933672 C1.725067,14.3673303 3.774065,14.9940959 5.975386,14.9940959 C13.14534,14.9940959 17.066275,9.22621771 17.066275,4.22407749 C17.066275,4.0599631 17.06238,3.89677122 17.054875,3.73440959 C17.8165841,3.20064576 18.4774041,2.53404059 18.9999991,1.77490775"></path>
                                     </g>
                                 </g>
-                            </svg>        
+                            </svg>
                             </a>
                         </li>
 
@@ -296,7 +315,7 @@ document<span class="token punctuation">.</span><span class="token function">get
                                         </g>
                                     </g>
                                 </g>
-                            </svg>       
+                            </svg>
                             </a>
                         </li>
 
@@ -315,7 +334,7 @@ document<span class="token punctuation">.</span><span class="token function">get
                                             </g>
                                         </g>
                                     </g>
-                                </svg>       
+                                </svg>
                                  </a>
                         </li>
                     </ul>
@@ -358,7 +377,7 @@ document<span class="token punctuation">.</span><span class="token function">get
                         </div>
                     </form>
                 </section>
-                <!--End mc_embed_signup-->       
+                <!--End mc_embed_signup-->
                 <section class="post__suggestions m-b-md">
                     <h2 class="sr-only">More Posts</h2>
 
@@ -381,7 +400,7 @@ document<span class="token punctuation">.</span><span class="token function">get
                             </h3>
                             <p class="post__meta"><em><a href="/tag/css/">css</a></em></p>
                         </article>
-                </section>    
+                </section>
             </footer>
 
 </article>
@@ -389,12 +408,12 @@ document<span class="token punctuation">.</span><span class="token function">get
        <aside class="site__sidebar">
                 <div class="box p-a-sm m-b-md">
                     <p class="m-b-sm">
-                        <strong>Codeforyou</strong>. Artículos sobre Frontend . Todos los artículos son escrito por 
+                        <strong>Codeforyou</strong>. Artículos sobre Frontend . Todos los artículos son escrito por
                         <a href="#">Jorge Callalle</a>, Frontend Developer and User Interface Designer. </p>
 
                     <a href="https://twitter.com/jlcallalle" class="twitter-follow-button" data-show-count="true">Follow @jlcallalle</a>
                 </div>
-              
+
                 <div class="social">
                     <ul>
                         <li>
@@ -462,7 +481,7 @@ document<span class="token punctuation">.</span><span class="token function">get
                         </li>
                     </ul>
                 </div>
-       </aside> 
+       </aside>
 
 </div>
 </div>
