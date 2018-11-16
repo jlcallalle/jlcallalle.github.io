@@ -5,18 +5,18 @@
   xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 <!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
 <url>
-  <loc>http://midominio.com/</loc>
+  <loc>https://jlcallalle.github.io/</loc>
 </url>
 <url>
-  <loc>http://midominio.com/seccion1.html</loc>
+  <loc>https://jlcallalle.github.io/blog</loc>
 </url>
 <url>
-  <loc>http://midominio.com/seccion2.html</loc>
+  <loc>https://jlcallalle.github.io/blog/html</loc>
 </url>
 <url>
-  <loc>http://midominio.com/seccion3.html</loc>
+  <loc>https://jlcallalle.github.io/blog/css</loc>
 </url>
 <url>
-  <loc>http://midominio.com/seccion4.html</loc>
+  <loc>https://jlcallalle.github.io/blog/js</loc>
 </url>
 </urlset>

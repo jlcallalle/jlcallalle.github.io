@@ -39,7 +39,6 @@ $(function () {
 });
 
 
-
 (function() {
   $('.skills-prog li').find('.skills-bar').each(function(i) {
     $(this).find('.bar').delay(i * 150).animate({

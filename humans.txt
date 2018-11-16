@@ -4,11 +4,11 @@
 # TEAM
 
     <name> -- <role> -- <twitter>
-    < Medialab > -- < Team Frontend > -- < @jlcallalle >
+    < Jorge Luis Callalle > -- < Frontend > -- < @jlcallalle >
 
 # THANKS
 
-    < Team Medialab 2018>
+    < jlcallalle 2018>
 
 # TECHNOLOGY COLOPHON
 
