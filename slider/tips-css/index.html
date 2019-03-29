@@ -4,11 +4,12 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+		<title>Tips CSS para un Proyecto Web</title>
 
 		<link rel="stylesheet" href="css/reveal.css">
 		<!--<link rel="stylesheet" href="css/theme/black.css"> -->
-		<link rel="stylesheet" href="css/theme/white.css">
+		<!--<link rel="stylesheet" href="css/theme/white.css"> -->
+		<link rel="stylesheet" href="css/theme/jing.css">
 
 		<!-- Theme used for syntax highlighting of code -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
@@ -27,9 +28,144 @@
 			<div class="slides">
 				<section>
 					<h1>Tips CSS para un Proyecto Web</h1>
-					<p><small>Por <a href="https://jlcallalle.github.io/">Jorge Callalle</a> / <a href="http://twitter.com/jlcallalle">@jlcallalle</a></small></p>
+					<p><small> De <a href="https://jlcallalle.github.io/">Jorge Callalle</a> / <a href="http://twitter.com/jlcallalle">@jlcallalle</a></small></p>
 				</section>
-				<section>Slide 2</section>
+				<section>
+					<h2>Sobre mi:</h2>
+					<div class="j-col2-25">
+						<img data-src="img/jorge.jpg" alt="Jorge">
+						<p>🎮 🏀 🚲 💻 👟</p>
+					</div>
+					<div class="j-col2-25">
+						<p>Mi nombre Jorge Callalle.</p>
+						<p>Front-end Developer Autodidacta.</p>
+						<p>Trabajo como Frelance.</p>
+						<p>Me gusta correr en los Maratones.</p>
+					</div>
+				</section>
+				<section>
+					<section>
+						<h2>Cascading Style Sheets (CSS)</h2>
+						<ul>
+							<li>Le dice al navegador como  <strong>mostrar</strong> un elemento determinado en la web.</li>
+							<li>Sigue un  conjunto de reglas generales:</li>
+								<ol>
+									<li>Seleccione el elemento HTML.</li>
+									<li>Especifique las propiedades del elemento.</li>
+									<li>Dé los valores que queremos que cada propiedad tenga.</li>
+								</ol>
+						</ul>
+						<aside class="notes">
+							Not a programming language like Javascript, nor a mark-up language like HTML<br>
+							Nothing quite like it<br>
+							Easy to understand and use but very hard to do right
+						</aside>
+					</section>
+
+					<section>
+						<h2>Estructura de una regla CSS</h2>
+						<pre><code>selector {
+  propiedad1: valor;
+  propiedad2: valor;
+  propiedad3: valor;
+}</code></pre>
+						<ul>
+							<li>El <strong>selector</strong> Identifica a qué elementos HTML se aplicará la regla</li>
+							<li>Las  <strong>llaves</strong> Contiene los pares propiedad-valor, separados por punto y coma.</li>
+							<li>Las <strong>propiedades</strong> Definir el estilo del elemento seleccionado.</li>
+							<li>El <strong>valor</strong>Dependen de la propiedad e indican el valor de las propiedades que se establecerán</li>
+						</ul>
+					</section>
+
+
+					
+					<section>
+						<h2>Evolución del CSS</h1>
+					</section>
+					<section data-background-image="img/css-history.svg" data-background-size="95%">
+						<aside class="notes">
+						  <p>CSS has come a long way since 1996, starting out as a simple style sheet mechanism allowing authors and readers to attach style to HTML documents.</p>
+						  <p>Today, CSS still does that, it is still a language that describes the rendering of HTML in various media, but the vocabulary of CSS is significantly larger.</p>
+						</aside>
+					</section>
+				</section>
+				<section>
+						<h2 style="margin-bottom:1em;">Evolución de layout en los años</h2>
+						<img class="plain" data-src="img/browsers.svg" alt="Evolución de layout en los año">
+					  </section>
+				<section>
+					<h2> Flexbox and Grid</h2>
+					<p>Nueva forma de hacer layout Modernas</p>
+					<br>
+					<img class="plain" data-src="img/new-layout.svg" alt="Flexbox, Box alignment & Grid">
+					
+				</section>
+
+				<section>
+					<h2>Layout CSS con Flexbox</h1>
+					<p> <strong>Flexbox: </strong> es eclare comma-separated list of image sources, which browsers will serve according to certain conditions we specify using descriptors.</p>
+					<pre><code>.container {display:flex;}</code></pre>
+				</section>
+				<section>
+					<h2>Flexbox basics</h2>
+					<p data-height="640" data-theme-id="0" data-slug-hash="NEPwoj" data-default-tab="html,result" data-user="huijing" data-pen-title="Flexbox basics" class="codepen">See the Pen <a href="https://codepen.io/huijing/pen/NEPwoj/">Flexbox basics</a> by Chen Hui Jing (<a href="https://codepen.io/huijing">@huijing</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+					<p><a href="https://codepen.io/huijing/pen/NEPwoj/">https://codepen.io/huijing/pen/NEPwoj/</a></p>
+					</section>
+				<section>
+					<h2>Can I use...flex?</h1>
+					<img data-src="img/flex.png" alt="Can I use flex?">
+				</section>
+				<section>
+					<h2>Layout CSS con Grid</h1>
+					<p> <strong>Grid: </strong> es eclare comma-separated list of image sources, which browsers will serve according to certain conditions we specify using descriptors.</p>
+					<pre><code>.container {display:grid;}</code></pre>
+					
+				</section>
+
+				<section>
+					<h2>Defining a grid</h2>
+					<p data-height="640" data-theme-id="0" data-slug-hash="mzKoNj" data-default-tab="html,result" data-user="huijing" data-pen-title="#1: Defining a grid" class="codepen">See the Pen <a href="https://codepen.io/huijing/pen/mzKoNj/">#1: Defining a grid</a> by Chen Hui Jing (<a href="https://codepen.io/huijing">@huijing</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+					<p><a href="https://codepen.io/huijing/pen/mzKoNj/">https://codepen.io/huijing/pen/mzKoNj/</a></p>
+				</section>
+			
+				<section>
+					<h2>The repeat() function</h2>
+					<p data-height="640" data-theme-id="0" data-slug-hash="XxveJe" data-default-tab="html,result" data-user="huijing" data-pen-title="#2.1: The repeat() function" class="codepen">See the Pen <a href="https://codepen.io/huijing/pen/XxveJe/">#2.1: The repeat() function</a> by Chen Hui Jing (<a href="https://codepen.io/huijing">@huijing</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+					<p><a href="https://codepen.io/huijing/pen/XxveJe/">https://codepen.io/huijing/pen/XxveJe/</a></p>
+				</section>
+
+				<section>
+					<h2>The fr unit</h2>
+					<p data-height="640" data-theme-id="0" data-slug-hash="WaVdLN" data-default-tab="css,result" data-user="huijing" data-pen-title="#3.1: The fr unit" class="codepen">See the Pen <a href="https://codepen.io/huijing/pen/WaVdLN/">#3.1: The fr unit</a> by Chen Hui Jing (<a href="https://codepen.io/huijing">@huijing</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+					<p><a href="https://codepen.io/huijing/pen/WaVdLN/">https://codepen.io/huijing/pen/WaVdLN/</a></p>
+				</section>
+				
+				<section>
+					<h2>Can I use...grid?</h1>
+					<img data-src="img/grid.png" alt="Can I use grid?">
+				</section>
+				<section>
+					<h2>Dibujando con CSS</h1>
+					<p></p>
+				</section>
+			
+				<section>
+					<h2>Sigue a los mejores y encuentra inspiración...</h2>
+					<p><a href="https://dev.opera.com/articles/native-responsive-images/">Native Responsive Images</a> by <a href="https://twitter.com/yoavweiss">Yoav Weiss</a></p>
+					<p><a href="http://www.zeldman.com/2014/02/25/responsive-images-with-mat-marquis/">Responsive images get real</a> with <a href="https://twitter.com/wilto">Mat Marquis</a></p>
+					<p><a href="https://jakearchibald.com/2015/anatomy-of-responsive-images/">The anatomy of responsive images</a> by <a href="https://twitter.com/jaffathecake">Jake Archibald</a></p>
+					<p><a href="https://ericportis.com/posts/2014/srcset-sizes/">Srcset and sizes</a> by <a href="https://twitter.com/etportis">Eric Portis</a></p>
+					<p><a href="https://ericportis.com/posts/2014/srcset-sizes/">Responsive Images 101</a> by <a href="https://twitter.com/grigs">Jason Grigsby</a></p>	
+				</section>
+
+				<section style="text-align: left;">
+					<h1>Gracias</h1>
+					<p><img class="j-icon" data-src="img/home.png" alt="Website"><a href="https://jlcallalle.github.io/slider/tips-css">hhttps://jlcallalle.github.io/slider/tips-css</a></p>
+					<p><img class="j-icon" data-src="img/twitter.png" alt="Twitter"><a href="https://twitter.com/jlcallalle">@jlcallalle</a></p>
+					<!--<p><img class="j-icon" data-src="img/medium.png" alt="Medium"><a href="https://medium.com/@jlcallalle">@jlcallalle</a></p> -->
+					<p><img class="j-icon" data-src="img/codepen.png" alt="Codepen"><a href="http://codepen.io/jlcallalle/">@jlcallalle</a></p>
+				</section>
+
 			</div>
 		</div>
 
