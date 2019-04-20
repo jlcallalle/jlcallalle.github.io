@@ -1,8 +1,8 @@
 extends ../templates/main-template
 
 block title
-    -var project = {name: 'Site', section: 'Section'}
-    title= project.name +' | ' + project.section
+    -var project = {name: 'Jorge', section: 'Callalle'}
+    title= project.name +'  ' + project.section
 
 block description
     meta(name='description', content='Page description')
@@ -11,8 +11,7 @@ block content
       .sidebar
         .profile
           .photo
-            //img(src='img/jorge_callalle.jpg', alt='')
-            img(src='https://cdn.pixabay.com/photo/2018/10/11/11/47/graphic-3739607_960_720.png', alt='')
+            img(src='img/foto2.jpg', alt='')
           .info
             h4.name Jorge Callalle
             small.job Front-End Web Developer
@@ -67,7 +66,7 @@ block content
             ul
               li
                 span Platzi
-                small Nov 2017 - Nov 2018
+                small 2018 - Now
               li
                 span Big Data and Machine Learning at BSGrupo
                 small Ju 2017 - Feb 2018
